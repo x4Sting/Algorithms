@@ -1,9 +1,9 @@
-#include <vector>
+#include "Search.h"
 
-int BinarySearch(std::vector<int> Array, int Item)
+int CSearch::BinarySearch(std::vector<int> Array, int Item)
 {
 	auto Low = 0;
-	auto Hight = Array.size();
+	auto Hight = static_cast<int>(Array.size());
 
 	while (Low <= Hight)
 	{
