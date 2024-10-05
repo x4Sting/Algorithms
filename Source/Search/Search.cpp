@@ -1,20 +1,18 @@
 #include "Search.h"
 
-int CSearch::BinarySearch(std::vector<int> Array, int Item)
+int CSearch::BinarySearch(std::vector<int> Vector, int Item)
 {
 	auto Low = 0;
-	auto Hight = static_cast<int>(Array.size());
+	auto Hight = static_cast<int>(Vector.size());
 
 	while (Low <= Hight)
 	{
 		auto Mid = (Low + Hight) / 2;
 
-		auto i = Array[Mid];
-
-		if (i == Item)
+		if (Vector[Mid] == Item)
 			return Mid;
 
-		if (i > Item)
+		if (Vector[Mid] > Item)
 			Hight = Mid - 1;
 		else
 			Low = Mid + 1;
